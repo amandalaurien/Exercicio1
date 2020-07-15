@@ -7,9 +7,27 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+void main() {
+    
+    
+    // Solicitar duas notas e realizar a media entre elas
+    
+    //Para usar acento
+    setlocale(LC_ALL, "");
+    
+    float a;
+    float b;
+    
+    printf(" Informe a primeira nota: \n");
+    scanf( " %f", &a);
+    
+    fflush(stdin);
+    printf(" \n Informe a segunda nota: \n");
+    scanf( " %f", &b);
+    
+    printf(" \n A média do aluno é: %.1f \n", (a + b)/2);
+    
 }
